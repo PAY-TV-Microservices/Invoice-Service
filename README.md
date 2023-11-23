@@ -74,7 +74,7 @@ Microsserviço responsável pela emissão das faturas para os assinantes dos pac
     "totalCost": 400,
 }
 
-# PAY-TV 📺
+# PAY-TV: Invoice Service 📺
 
 ## :paperclips: Sobre
 
@@ -99,7 +99,7 @@ Neste repositório, a proposta é implementar um microsserviço responsável pel
 ## ⚙️ Como Executar
 1. Clone o repositório em uma pasta de preferência
   ```
-  https://github.com/PAY-TV-Microservices/Invoice-Service)https://github.com/PAY-TV-Microservices/Invoice-Servic
+  https://github.com/PAY-TV-Microservices/Invoice-Service
   ```
 2. Dentro do projeto, rode 
   ```
@@ -113,7 +113,7 @@ Neste repositório, a proposta é implementar um microsserviço responsável pel
 
 ## 🤝 Contratos
 
-### ASSINATURA-response-FATURA
+#### - ASSINATURA-response-FATURA
   ```
 {
     "userId":"string",
@@ -142,7 +142,7 @@ Neste repositório, a proposta é implementar um microsserviço responsável pel
     ],
 }
   ```
-### FATURA-request-PACOTES:
+#### - FATURA-request-PACOTES:
 
   ```
 [
@@ -155,7 +155,7 @@ Neste repositório, a proposta é implementar um microsserviço responsável pel
 ]
 
   ```
-### PACOTES-response-FATURA:
+#### - PACOTES-response-FATURA:
 
   ```
 {
@@ -175,7 +175,7 @@ Neste repositório, a proposta é implementar um microsserviço responsável pel
 
   ```
 
-### FATURA-response-PAGAMENTOS:
+#### - FATURA-response-PAGAMENTOS:
   ```
 {
     "invoiceId":"string",   
