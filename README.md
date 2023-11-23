@@ -66,6 +66,7 @@ Microsserviço responsável pela emissão das faturas para os assinantes dos pac
     "totalCost": 200,
 },
 {
+    "invoiceId":"string",
     "userId":"string",
     //LocalDate
     "dueDate": 05/04/2023,
