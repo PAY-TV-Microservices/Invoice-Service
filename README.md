@@ -76,17 +76,14 @@ Microsserviço responsável pela emissão das faturas para os assinantes dos pac
 
 # PAY-TV: Invoice Service 📺
 
+## :paperclips: Sobre 
+
 O PAY-TV foi desenvolvido durante o curso Back-end Java da [Ada](https://ada.tech/) no módulo "Arquitetura de Software Ágil II".<br>
 
-O projeto inclui a adesão de um pacote de TV, assinatura de pacotes e promoções por tempo determinado,<br>
+O projeto inclui a adesão de um pacote de TV, assinatura de pacotes e promoções por tempo determinado,
 agendamento de visitas técnicas para instalação de equipamentos ou manutenção, emissão de fatura e pagamento.<br>
 
-O objetivo do Invoice Service é implementar o microsserviço responsável pela emissão das faturas para os assinantes dos pacotes de canais da PAY-TV.
-
-## :paperclips: Sobre
-
-O PAY-TV é um projeto desenvolvido durante o curso Back-end Java da [Ada](https://ada.tech/) no módulo "Arquitetura de Software Ágil II".<br>
-
+O objetivo deste repositório é implementar o Invoice Service - microsserviço responsável pela emissão das faturas para os assinantes dos pacotes de canais da PAY-TV.<br>
 
 ## :pushpin: Funcionalidades principais
 
