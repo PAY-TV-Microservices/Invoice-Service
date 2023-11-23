@@ -78,7 +78,8 @@ Microsserviço responsável pela emissão das faturas para os assinantes dos pac
 
 ## :paperclips: Sobre
 
-O PAY-TV é um projeto desenvolvido durante o curso Back-end Java da [Ada](https://ada.tech/) no módulo "Arquitetura de Software Ágil II". O projeto inclui a adesão de um pacote de TV, assinatura de pacotes e promoções por tempo determinado, agendamento de visitas técnicas para instalação de equipamentos ou manutenção, emissão de fatura e pagamento.<br>
+O PAY-TV é um projeto desenvolvido durante o curso Back-end Java da [Ada](https://ada.tech/) no módulo "Arquitetura de Software Ágil II".<br>
+O projeto inclui a adesão de um pacote de TV, assinatura de pacotes e promoções por tempo determinado, agendamento de visitas técnicas para instalação de equipamentos ou manutenção, emissão de fatura e pagamento.<br>
 Neste repositório, a proposta é implementar um microsserviço responsável pela emissão das faturas para os assinantes dos pacotes de canais.
 
 ## :pushpin: Funcionalidades principais
