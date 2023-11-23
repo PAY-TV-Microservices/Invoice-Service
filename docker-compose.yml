@@ -5,12 +5,8 @@ services:
     container_name: rabbitmq_3-management
 
     ports:
-      - 15677:15672
-      - 5677:5672
-
-    volumes:
-      - ./rabbitmq-data:/var/lib/rabbitmq
-      - ./rabbitmq-config:/etc/rabbitmq
+      - 15672:15672
+      - 5672:5672
 
     environment:
       - RABBITMQ_DEFAULT_USER=guest
