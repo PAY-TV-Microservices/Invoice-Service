@@ -4,6 +4,8 @@ import br.ada.invoiceService.model.Invoice;
 import br.ada.invoiceService.payload.PackageRequest;
 import br.ada.invoiceService.payload.response.PackageResponse;
 import br.ada.invoiceService.repository.InvoiceRepository;
+
+import java.math.BigDecimal;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,11 +18,21 @@ public class SendPackageRequestService {
   private final PackageValuesService packageValuesService;
 
   public PackageResponse sendRequest(PackageRequest packageRequest) {
+
+
     Invoice invoice = new Invoice();
     for (String packageId : packageRequest.getPackageIds()) {
       invoice.setPackageId(packageId);
       invoiceRepository.save(invoice);
     }
+
+
+//      public class PackageResponse {
+//          private String packageId;
+//          private BigDecimal packageValue;
+//          private BigDecimal dealValue;
+
+
     packageValuesService.requestPackagesValues(invoice)
       .subscribe(
         responseEntity -> {
@@ -32,3 +44,6 @@ public class SendPackageRequestService {
       );
   }
 }
+
+
+

@@ -21,11 +21,20 @@ public class InvoiceConvert {
 
   public static InvoiceResponse toResponse(Invoice invoice) {
     InvoiceResponse invoiceResponse = new InvoiceResponse();
-    invoiceResponse.setInvoiceId(invoice.getId());
+    invoiceResponse.setInvoiceId(invoice.getNumber());
     invoiceResponse.setUserId(invoice.getUserId());
     invoiceResponse.setDueDate(invoice.getIssueDate().plusDays(30));
     invoiceResponse.setTotalCost(invoice.getPackageValue());
 
     return invoiceResponse;
+  }
+
+  public static Invoice toEntityFromResponse(InvoiceResponse invoiceResponse) {
+    Invoice invoice = new Invoice();
+    invoice.setNumber(invoiceResponse.getInvoiceId());
+    invoice.setUserId(invoiceResponse.getUserId());
+    invoice.setIssueDate(invoiceResponse.getDueDate().minusDays(30));
+    invoice.setTotalCost(invoiceResponse.getTotalCost());
+    return invoice;
   }
 }
