@@ -53,7 +53,7 @@
         size: 50
       checkout-timeout: 10000
 
-
+  ## Queues:
   payment:
     queue:
       issue-invoice:
@@ -62,18 +62,4 @@
   subscription:
     queue:
       receive-info:
-        in: USER_INFO
-
-  ## Enabling rabbitmq
-
-  #  rabbitmq:
-  #    host: 127.0.0.1
-  #    port: 5672
-  #    username: <username>
-  #    password: <password>
-  #    cache:
-  #      connection:
-  #        mode: CONNECTION
-  #      channel:
-  #        size: 50
-  #      checkout-timeout: 10000
+        in: subscription-package
