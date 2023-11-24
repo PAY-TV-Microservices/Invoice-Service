@@ -1,21 +1,15 @@
-package br.ada.invoiceService.payload.response;
+package br.ada.invoiceService.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import java.math.BigDecimal;
-
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class PackageResponse {
+public class Package {
   private String packageId;
   private BigDecimal packageValue;
   private BigDecimal dealValue;
-// recebe do pacote
 }
