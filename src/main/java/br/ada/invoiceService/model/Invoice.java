@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,19 +25,22 @@ public class Invoice {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private String id;
 
   @Column(name = "number", nullable = false)
   private String number; //número da fatura
 
+  @Column(name = "user_id", nullable = false)
+  private String userId; //id do usuário
+
   @Column(name = "issue_date", nullable = false)
   private LocalDate issueDate; //data de emissão
 
-  @Column(name = "sku_id", nullable = false)
-  private String skuId; //SKU que recebemos do pacote
+  @Column(name = "package_id", nullable = false)
+  private String packageId; //id do pacote
 
   @Column(name = "package_value", nullable = false)
-  private Double packageValue; //valor que recebemos do pacote
+  private BigDecimal packageValue; //valor que recebemos do pacote
 
   @Column(name = "status", nullable = false)
   @Enumerated(EnumType.STRING)
