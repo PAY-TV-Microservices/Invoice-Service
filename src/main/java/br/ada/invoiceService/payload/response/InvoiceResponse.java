@@ -1,4 +1,4 @@
-package br.ada.invoiceService.payload;
+package br.ada.invoiceService.payload.response;
 
 
 import lombok.Data;
@@ -7,9 +7,10 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
-public class Invoice2PaymentRequest {
+public class InvoiceResponse {
         private String invoiceId;
         private String userId;
         private LocalDate dueDate;
         private BigDecimal totalCost;
+        // devolve para pagamento
 }

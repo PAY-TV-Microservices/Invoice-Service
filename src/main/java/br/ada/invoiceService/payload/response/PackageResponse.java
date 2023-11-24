@@ -1,11 +1,11 @@
-package br.ada.invoiceService.payload;
+package br.ada.invoiceService.payload.response;
 
-import java.util.List;
 import java.math.BigDecimal;
 
-public class Package2InvoiceResponse {
+public class PackageResponse {
 
     private String packageId;
     private BigDecimal packageValue;
     private BigDecimal dealValue;
+    // recebe do pacote
 }

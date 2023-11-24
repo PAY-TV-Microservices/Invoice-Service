@@ -1,8 +1,8 @@
 package br.ada.invoiceService.service;
 
-import br.ada.invoiceService.payload.Subscription2InvoiceRequest;
+import br.ada.invoiceService.payload.InvoiceRequest;
 import br.ada.invoiceService.queue.QueueProducerPayment;
-import br.ada.invoiceService.payload.Invoice2PaymentRequest;
+import br.ada.invoiceService.payload.response.InvoiceResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,8 @@ public class InvoiceService {
 
     private final QueueProducerPayment queueProducerPayment;
 
-    public void saveInfoFromSubscription(Subscription2InvoiceRequest subscription2InvoiceRequest){
+    public void saveInfoFromSubscription(InvoiceRequest invoiceRequest){
+
         // TODO
 
     }
@@ -35,13 +36,13 @@ public class InvoiceService {
     }
 
     public void issueInvoice2Payment(String invoiceId, String userId, LocalDate dueDate, BigDecimal totalCost){
-        Invoice2PaymentRequest invoice2PaymentRequest = new Invoice2PaymentRequest();
-        invoice2PaymentRequest.setInvoiceId(invoiceId);
-        invoice2PaymentRequest.setUserId(userId);
-        invoice2PaymentRequest.setDueDate(dueDate);
-        invoice2PaymentRequest.setTotalCost(totalCost);
+        InvoiceResponse invoiceResponse = new InvoiceResponse();
+        invoiceResponse.setInvoiceId(invoiceId);
+        invoiceResponse.setUserId(userId);
+        invoiceResponse.setDueDate(dueDate);
+        invoiceResponse.setTotalCost(totalCost);
         try {
-            queueProducerPayment.send(invoice2PaymentRequest);
+            queueProducerPayment.send(invoiceResponse);
         } catch (JsonProcessingException e) {
             log.error("Não foi possível enviar a mensagem ao destinatário", e);
             throw new RuntimeException(e);
