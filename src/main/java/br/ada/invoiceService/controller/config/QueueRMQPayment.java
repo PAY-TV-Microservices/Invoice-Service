@@ -16,5 +16,4 @@ public class QueueRMQPayment {
         return new Queue(queueName, true);
     }
 
-
 }

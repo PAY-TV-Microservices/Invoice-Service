@@ -2,7 +2,6 @@ package br.ada.invoiceService.payload;
 
 import java.time.LocalDate;
 
-import java.util.List;
 import lombok.Getter;
 
 @Getter
