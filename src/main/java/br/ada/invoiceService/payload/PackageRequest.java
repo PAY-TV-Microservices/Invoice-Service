@@ -8,9 +8,9 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 public class PackageRequest {
     private List<String> packageIds;
     //envia para pacote
