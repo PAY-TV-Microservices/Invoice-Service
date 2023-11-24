@@ -2,13 +2,14 @@ package br.ada.invoiceService.payload;
 
 import java.time.LocalDate;
 
+import java.util.List;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
 public class InvoiceRequest {
     private String userId;
     private LocalDate issueDate;

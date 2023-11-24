@@ -9,9 +9,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Data
 public class InvoiceResponse {
-        private String invoiceId;
-        private String userId;
-        private LocalDate dueDate;
-        private BigDecimal totalCost;
-        // devolve para pagamento
+  private String invoiceId;
+  private String userId;
+  private LocalDate dueDate;
+  private BigDecimal totalCost;
+  // devolve para pagamento
 }
