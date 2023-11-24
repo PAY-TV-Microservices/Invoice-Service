@@ -40,6 +40,25 @@
     enabled: true
     change-log: classpath:db/changelog/changelog-local.xml
 
+  ## Enable RabbitMQ:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    cache:
+      connection:
+        mode: CONNECTION
+      channel:
+        size: 50
+      checkout-timeout: 10000
+
+
+  payment:
+    queue:
+      issue-invoice:
+        out: CRIAR_PAGAMENTO
+
   ## Enabling rabbitmq
 
   #  rabbitmq:
