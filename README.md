@@ -1,79 +1,3 @@
-# Invoice-Service
-Microsserviço responsável pela emissão das faturas para os assinantes dos pacotes de canais.
-
-## Contratos
-### ASSINATURA-response-FATURA
-{
-    "userId":"string",
-    //LocalDate
-    "issueDate": 10/02/2023,
-    [
-        {
-            "packageId":"string",
-        },
-        {
-            "packageId":"string",
-        }
-    ],
-},
-{
-    "userId":"string",
-    //LocalDate
-    "issueDate": 10/02/2023,
-    [
-        {
-            "packageId":"string",
-        },
-        {
-            "packageId":"string",
-        }
-    ],
-}
-
-### FATURA-request-PACOTES:
-[
-    {
-        "packageId":"string",
-    },
-    {
-        "packageId":"string",
-    }
-]
-
-### PACOTES-response-FATURA:
-{
-    "packageId":"STRING",
-    //bigdecimal
-    "packageValue": 100,
-    //bigdecimal
-    "dealValue": 20,
-},
-{
-    "packageId":"STRING",
-    //bigdecimal
-    "packageValue": 300,
-    //bigdecimal
-    "dealValue": 50,
-}
-
-### FATURA-response-PAGAMENTOS:
-{
-    "invoiceId":"string",   
-    "userId":"string",
-    //LocalDate
-    "dueDate": 10/02/2023,
-    //bigdecimal
-    "totalCost": 200,
-},
-{
-    "invoiceId":"string",
-    "userId":"string",
-    //LocalDate
-    "dueDate": 05/04/2023,
-    //bigdecimal
-    "totalCost": 400,
-}
-
 # PAY-TV: Invoice Service 📺
 
 ## :paperclips: Sobre 
@@ -117,12 +41,12 @@ O objetivo deste repositório é implementar o Invoice Service - microsserviço 
 
 ## 🤝 Contratos
 
-#### - ASSINATURA-response-FATURA
+#### - ASSINATURA-response-FATURA:
   ```
 {
     "userId":"string",
     //LocalDate
-    "issueDate": 10/02/2023,
+    "issueDate": LocalDate,
     [
         {
             "packageId":"string",
@@ -199,9 +123,4 @@ O objetivo deste repositório é implementar o Invoice Service - microsserviço 
 }
   ```
 
-## 📚 Documentação (endpoints)
-  ```
-  bla bla bla
-  ```
-
-> _O desenvolvimento dos Microsserviços de Fatura e Visita Técnica da PAY-TV foi realizado por [Dayane](https://github.com/acdayane), [Juliana](https://github.com/julianaando), [Karen](https://github.com/karenCLima), [Natalia](https://github.com/nataliagiacobo), [Raquel](https://github.com/raquelpcarvalho) e [Thaís](https://github.com/tdthais)._
+> _Os Microsserviços de Fatura e Visita Técnica da PAY-TV foram desenvolvidos por [Dayane](https://github.com/acdayane), [Juliana](https://github.com/julianaando), [Karen](https://github.com/karenCLima), [Natalia](https://github.com/nataliagiacobo), [Raquel](https://github.com/raquelpcarvalho) e [Thaís](https://github.com/tdthais)._
