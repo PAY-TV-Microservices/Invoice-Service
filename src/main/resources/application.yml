@@ -44,16 +44,26 @@
     package:
       url: http://localhost:8080/package
 
-  ## Enabling rabbitmq
+  ## Enable RabbitMQ:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    cache:
+      connection:
+        mode: CONNECTION
+      channel:
+        size: 50
+      checkout-timeout: 10000
 
-  #  rabbitmq:
-  #    host: 127.0.0.1
-  #    port: 5672
-  #    username: <username>
-  #    password: <password>
-  #    cache:
-  #      connection:
-  #        mode: CONNECTION
-  #      channel:
-  #        size: 50
-  #      checkout-timeout: 10000
+  ## Queues:
+  payment:
+    queue:
+      issue-invoice:
+        out: CRIAR_PAGAMENTO
+
+  subscription:
+    queue:
+      receive-info:
+        in: subscription-package
