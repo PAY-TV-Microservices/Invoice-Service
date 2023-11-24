@@ -1,13 +1,12 @@
 package br.ada.invoiceService.payload.response;
 
-import lombok.Data;
+import lombok.*;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class InvoiceResponse {
         private String invoiceId;

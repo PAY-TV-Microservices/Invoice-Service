@@ -28,23 +28,23 @@ public class InvoiceService {
 
 
     public void saveInfoFromSubscription(InvoiceRequest invoiceRequest){
-
+        System.out.println("invoice request userId" + invoiceRequest.getUserId());
+        // -> disparar request pro pacote! (chamar o método que faz o request)
 
         // TODO
-
     }
+
     public void xxxxxx(){
         // TODO
         // envia lista de pacote,
         // recebe ids dos pacotes/valor pacotes/valor desconto
-        // calculadora
+        // calculadora -> calcular valor total!
+
+
+        // -> chamar issueInvoice2Payment
 
     }
 
-    public void consolidateInvoiceData(){
-        // TODO
-        // Unir infos obtidas da assinatura e dos pacotes e chamar InvoiceCalculator.java pra calcular o total
-    }
 
     public void issueInvoice2Payment(String invoiceId, String userId, LocalDate dueDate, BigDecimal totalCost){
         InvoiceResponse invoiceResponse = new InvoiceResponse();

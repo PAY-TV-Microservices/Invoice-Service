@@ -26,13 +26,6 @@ public class SendPackageRequestService {
       invoiceRepository.save(invoice);
     }
 
-
-//      public class PackageResponse {
-//          private String packageId;
-//          private BigDecimal packageValue;
-//          private BigDecimal dealValue;
-
-
     packageValuesService.requestPackagesValues(invoice)
       .subscribe(
         responseEntity -> {
@@ -42,7 +35,7 @@ public class SendPackageRequestService {
           invoiceRepository.save(invoice);
         }
       );
-  }
+  return null;}
 }
 
 
