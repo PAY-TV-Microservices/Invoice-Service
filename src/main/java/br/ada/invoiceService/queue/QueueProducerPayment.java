@@ -1,6 +1,6 @@
 package br.ada.invoiceService.queue;
 
-import br.ada.invoiceService.queue.payload.IssueInvoiceRequest;
+import br.ada.invoiceService.payload.Invoice2PaymentRequest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -10,15 +10,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class CriarPagamentoProducer {
+public class QueueProducerPayment {
     private RabbitTemplate rabbitTemplate;
 
     private final Queue queue;
 
     private final ObjectMapper objectMapper;
 
-    public void send(IssueInvoiceRequest issueInvoiceRequest) throws JsonProcessingException {
-        String message = objectMapper.writeValueAsString(issueInvoiceRequest);
+    public void send(Invoice2PaymentRequest invoice2PaymentRequest) throws JsonProcessingException {
+        String message = objectMapper.writeValueAsString(invoice2PaymentRequest);
         rabbitTemplate.convertAndSend(queue.getName(), message);
     }
 

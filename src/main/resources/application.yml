@@ -59,6 +59,11 @@
       issue-invoice:
         out: CRIAR_PAGAMENTO
 
+  subscription:
+    queue:
+      receive-info:
+        in: USER_INFO
+
   ## Enabling rabbitmq
 
   #  rabbitmq:
