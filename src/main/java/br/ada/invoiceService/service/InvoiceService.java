@@ -47,9 +47,5 @@ public class InvoiceService {
             log.error("Não foi possível enviar a mensagem ao destinatário", e);
             throw new RuntimeException(e);
         }
-
     }
-
-
-
 }

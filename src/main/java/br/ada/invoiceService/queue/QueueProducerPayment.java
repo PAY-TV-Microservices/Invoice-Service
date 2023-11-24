@@ -21,11 +21,4 @@ public class QueueProducerPayment {
         String message = objectMapper.writeValueAsString(invoiceResponse);
         rabbitTemplate.convertAndSend(queue.getName(), message);
     }
-
-
-
-
-
-
-
 }
