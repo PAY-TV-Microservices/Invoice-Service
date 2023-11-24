@@ -9,6 +9,6 @@ import lombok.Getter;
 public class InvoiceRequest {
     private String userId;
     private LocalDate issueDate;
-    private List<PackageRequest> packagesIds;
+    private PackageRequest packagesIds;
     // recebe da assinatura
 }

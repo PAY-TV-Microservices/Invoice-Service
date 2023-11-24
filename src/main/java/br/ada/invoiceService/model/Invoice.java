@@ -25,7 +25,7 @@ public class Invoice {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private String id;
+  private Long id;
 
   @Column(name = "number", nullable = false)
   private String number; //número da fatura
@@ -41,6 +41,12 @@ public class Invoice {
 
   @Column(name = "package_value", nullable = false)
   private BigDecimal packageValue; //valor que recebemos do pacote
+
+  @Column(name = "deal_value", nullable = false)
+  private BigDecimal dealValue; //desconto que recebemos do pacote em porcentagem
+
+  @Column(name = "total_cost", nullable = true)
+  private BigDecimal totalCost; //valor total da fatura
 
   @Column(name = "status", nullable = false)
   @Enumerated(EnumType.STRING)

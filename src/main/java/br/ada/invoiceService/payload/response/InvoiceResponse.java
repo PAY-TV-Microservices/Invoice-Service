@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class InvoiceResponse {
-    private String invoiceId;
+    private Long invoiceId;
     private String userId;
     private LocalDate dueDate;
     private BigDecimal totalCost;

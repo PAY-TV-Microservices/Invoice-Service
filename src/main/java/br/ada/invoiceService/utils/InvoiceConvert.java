@@ -10,11 +10,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class InvoiceConvert {
 
-  public static Invoice toEntity(InvoiceRequest invoiceRequest, PackageRequest packageRequest) {
+  public static Invoice toEntity(InvoiceRequest invoiceRequest) {
     Invoice invoice = new Invoice();
     invoice.setUserId(invoiceRequest.getUserId());
     invoice.setIssueDate(invoiceRequest.getIssueDate());
-    invoice.setPackageId(packageRequest.getPackageId());
+
 
     return invoice;
   }
