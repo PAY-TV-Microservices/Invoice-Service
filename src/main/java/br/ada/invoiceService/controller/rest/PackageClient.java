@@ -1,3 +1,4 @@
+/*
 package br.ada.invoiceService.controller.rest;
 
 import br.ada.invoiceService.payload.PackageRequest;
@@ -12,3 +13,4 @@ public interface PackageClient {
   @PostExchange(value = "/", contentType = MediaType.APPLICATION_JSON_VALUE)
   Mono<PackageResponse> getPackagesValues(@RequestBody PackageRequest packageRequest);
 }
+*/

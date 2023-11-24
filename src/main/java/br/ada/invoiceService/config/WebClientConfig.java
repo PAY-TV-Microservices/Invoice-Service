@@ -1,16 +1,12 @@
 package br.ada.invoiceService.config;
 
-import br.ada.invoiceService.controller.rest.PackageClient;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.reactive.function.client.support.WebClientAdapter;
-import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 
 @Configuration
@@ -20,17 +16,11 @@ public class WebClientConfig {
   private String packageUrl;
 
   @Bean
-  WebClient packageWebClient() {
+  public WebClient packageWebClient() {
     return WebClient.builder()
       .baseUrl(packageUrl)
+      .defaultCookie("cookie-name", "cookie-value")
+      .defaultHeader("Content-Type", MediaType.APPLICATION_JSON_VALUE)
       .build();
-  }
-
-  @Bean
-  PackageClient postPackageClient(WebClient webClient) {
-    HttpServiceProxyFactory httpServiceProxyFactory =
-      HttpServiceProxyFactory.builder(WebClientAdapter.forClient(webClient))
-        .build();
-    return httpServiceProxyFactory.createClient(PackageClient.class);
   }
 }
