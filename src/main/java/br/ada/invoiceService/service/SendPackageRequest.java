@@ -1,6 +1,11 @@
 package br.ada.invoiceService.service;
 
+import br.ada.invoiceService.payload.PackageRequest;
+import br.ada.invoiceService.payload.response.PackageResponse;
 import br.ada.invoiceService.repository.InvoiceRepository;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,14 +16,10 @@ public class SendPackageRequest {
   private final InvoiceRepository invoiceRepository;
   private final GetPackageValuesService packageValuesService;
 
-/*  public PackageResponse sendRequest(List<PackageRequest> packageRequest) {
-    List<PackageResponse> packageResponseList = new ArrayList<>();
-    for (PackageRequest packageRequest1 : packageRequest) {
-      String packageId = packageValuesService.getPackageId(packageRequest1);
-      if (Objects.nonNull(packageId)) {
-        packageResponseList.add(new PackageResponse(packageId));
-      }
-    }
-    return new PackageResponse(packageResponseList);
-  }*/
+  public PackageResponse sendRequest(List<PackageRequest> packageRequest) {
+   PackageResponse packageResponse = new PackageResponse();
+
+   for (PackageRequest request : packageRequest) {
+     Package response = invoiceRepository.findById(request.getPackageId()).orElse(null);
+   }
 }
