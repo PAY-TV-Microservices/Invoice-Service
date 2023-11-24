@@ -19,7 +19,6 @@ O objetivo deste repositório é implementar o Invoice Service - microsserviço 
 - **Linguagem de Programação:** Java
 - **Framework:** Spring Boot
 - **Banco de Dados:** PostgreSQL
-- **Arquitetura:** O projeto segue os princípios de SOLID e adota o padrão de arquitetura MVC (Model-View-Controller).
 - **Mensageria:** RabbitMQ
 - **Infraestrutura:** Docker
 - **Metodologia de Desenvolvimento:** Scrum
@@ -29,11 +28,12 @@ O objetivo deste repositório é implementar o Invoice Service - microsserviço 
   ```
   https://github.com/PAY-TV-Microservices/Invoice-Service
   ```
-2. Dentro do projeto, rode 
+2. Se necessário, instale as dependências
+3. Dentro do projeto, rode 
   ```
   docker-compose up
   ```
-3. Visualize a interface da API utilizando o Swagger UI ou outra plataforma de sua preferência <br>
+4. Visualize a interface da API utilizando o Swagger UI ou outra plataforma de sua preferência <br>
 > **Acesso ao Swagger UI** <br>
    Se preferir, você pode explorar e testar os endpoints da API acessando o Swagger UI. <br>
    Certifique-se de que o projeto esteja em execução e acesse a URL abaixo pelo seu navegador: <br>
