@@ -4,7 +4,10 @@ import br.ada.invoiceService.model.Invoice;
 import br.ada.invoiceService.payload.InvoiceRequest;
 import br.ada.invoiceService.payload.PackageRequest;
 import br.ada.invoiceService.payload.response.InvoiceResponse;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class InvoiceConvert {
 
   public static Invoice toEntity(InvoiceRequest invoiceRequest, PackageRequest packageRequest) {
