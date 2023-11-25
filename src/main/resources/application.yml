@@ -1,7 +1,7 @@
   server:
     servlet:
       context-path: /invoice-service
-      port: 9081
+      port: 8080
       compression:
         mime-types:
           - application/json
@@ -35,21 +35,35 @@
       init:
         continue-on-error: true
 
-  ## Enable liquidbase
-  liquibase:
-    enabled: true
-    change-log: classpath:db/changelog/changelog-local.xml
+    ## Enable liquidbase
+    liquibase:
+      enabled: true
+      change-log: classpath:db/changelog/changelog-local.xml
 
-  ## Enabling rabbitmq
+  microsservice:
+    package:
+      url: http://localhost:8080/package
 
-  #  rabbitmq:
-  #    host: 127.0.0.1
-  #    port: 5672
-  #    username: <username>
-  #    password: <password>
-  #    cache:
-  #      connection:
-  #        mode: CONNECTION
-  #      channel:
-  #        size: 50
-  #      checkout-timeout: 10000
+  ## Enable RabbitMQ:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    cache:
+      connection:
+        mode: CONNECTION
+      channel:
+        size: 50
+      checkout-timeout: 10000
+
+  ## Queues:
+  payment:
+    queue:
+      issue-invoice:
+        out: CRIAR_PAGAMENTO
+
+  subscription:
+    queue:
+      receive-info:
+        in: subscription-package
