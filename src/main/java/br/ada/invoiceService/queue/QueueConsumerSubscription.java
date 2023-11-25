@@ -1,8 +1,8 @@
 package br.ada.invoiceService.queue;
 
-
 import br.ada.invoiceService.payload.InvoiceRequest;
 import br.ada.invoiceService.service.InvoiceService;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

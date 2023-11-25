@@ -2,6 +2,7 @@ package br.ada.invoiceService.service;
 
 import br.ada.invoiceService.model.Invoice;
 import br.ada.invoiceService.payload.InvoiceRequest;
+import br.ada.invoiceService.payload.PackageRequest;
 import br.ada.invoiceService.queue.QueueProducerPayment;
 import br.ada.invoiceService.payload.response.InvoiceResponse;
 import br.ada.invoiceService.repository.InvoiceRepository;
@@ -24,11 +25,15 @@ public class InvoiceService {
     @Autowired
     InvoiceRepository invoiceRepository;
 
+    @Autowired
+    SendPackageRequest sendPackageRequest;
+
     private final QueueProducerPayment queueProducerPayment;
 
 
     public void saveInfoFromSubscription(InvoiceRequest invoiceRequest){
         System.out.println("invoice request userId" + invoiceRequest.getUserId());
+        sendPackageRequest.sendRequest(invoiceRequest.getPackagesIds());
         // -> disparar request pro pacote! (chamar o método que faz o request)
 
         // TODO
