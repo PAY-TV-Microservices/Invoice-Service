@@ -2,9 +2,7 @@ package br.ada.invoiceService.controller;
 
 import br.ada.invoiceService.payload.PackageRequest;
 import br.ada.invoiceService.payload.response.PackageResponse;
-import br.ada.invoiceService.service.GetPackageValuesService;
 import br.ada.invoiceService.service.SendPackageRequest;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

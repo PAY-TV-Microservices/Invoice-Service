@@ -1,11 +1,7 @@
 package br.ada.invoiceService.service;
 
 import br.ada.invoiceService.model.Package;
-import br.ada.invoiceService.payload.PackageRequest;
-import br.ada.invoiceService.payload.response.PackageResponse;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

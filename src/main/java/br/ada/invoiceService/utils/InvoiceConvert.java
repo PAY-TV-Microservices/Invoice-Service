@@ -2,7 +2,6 @@ package br.ada.invoiceService.utils;
 
 import br.ada.invoiceService.model.Invoice;
 import br.ada.invoiceService.payload.InvoiceRequest;
-import br.ada.invoiceService.payload.PackageRequest;
 import br.ada.invoiceService.payload.response.InvoiceResponse;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

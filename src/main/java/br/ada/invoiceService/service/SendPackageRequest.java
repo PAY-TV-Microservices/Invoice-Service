@@ -6,7 +6,6 @@ import br.ada.invoiceService.payload.PackageRequest;
 import br.ada.invoiceService.payload.response.PackageResponse;
 import br.ada.invoiceService.repository.InvoiceRepository;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
