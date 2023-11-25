@@ -17,7 +17,7 @@ public class QueueConsumerSubscription {
     private final ObjectMapper objectMapper;
     private final InvoiceService invoiceService;
 
-    @RabbitListener(queues = {"${subscription.queue.receive-info.in}"})
+    @RabbitListener(queues = {"subscription-package"})
     public void receive(String message) throws JsonProcessingException {
         log.info("[QueueConsumerSubscription] Mensagem recebida {}", message);
         InvoiceRequest invoiceRequest = objectMapper.readValue(message, InvoiceRequest.class);

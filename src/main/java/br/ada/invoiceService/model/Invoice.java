@@ -12,43 +12,43 @@ import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter @Setter
+@Data
 @Entity
 @Table(name = "invoices")
 public class Invoice {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private String id;
 
-  @Column(name = "number", nullable = false)
+  @Column(name = "number")
   private String number; //número da fatura
 
-  @Column(name = "user_id", nullable = false)
+  @Column(name = "user_id")
   private String userId; //id do usuário
 
-  @Column(name = "issue_date", nullable = false)
+  @Column(name = "issue_date")
   private LocalDate issueDate; //data de emissão
 
-  @Column(name = "package_id", nullable = false)
+  @Column(name = "package_id")
   private String packageId; //id do pacote
 
-  @Column(name = "package_value", nullable = false)
+  @Column(name = "package_value")
   private BigDecimal packageValue; //valor que recebemos do pacote
 
-  @Column(name = "deal_value", nullable = false)
+  @Column(name = "deal_value")
   private Integer dealValue; //desconto que recebemos do pacote em porcentagem
 
-  @Column(name = "total_cost", nullable = true)
+  @Column(name = "total_cost")
   private BigDecimal totalCost; //valor total da fatura
 
-  @Column(name = "status", nullable = false)
+  @Column(name = "status")
   @Enumerated(EnumType.STRING)
   private InvoiceStatus status; //status da fatura
 }
