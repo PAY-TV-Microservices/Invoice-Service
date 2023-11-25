@@ -6,10 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Package {
   private String packageId;
   private BigDecimal packageValue;
-  private BigDecimal dealValue;
+  private Integer dealValue;
 }

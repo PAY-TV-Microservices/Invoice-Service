@@ -1,17 +1,17 @@
 package br.ada.invoiceService.payload.response;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 
+import java.util.ArrayList;
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
+@AllArgsConstructor
 public class PackageResponse {
-  private String packageId;
-  private BigDecimal packageValue;
-  private BigDecimal dealValue;
+  ArrayList<PackageResponse> listPackages;
 // recebe do pacote
 }

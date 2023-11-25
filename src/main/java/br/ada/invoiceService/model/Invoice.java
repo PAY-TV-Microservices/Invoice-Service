@@ -36,7 +36,16 @@ public class Invoice {
   @Column(name = "issue_date", nullable = false)
   private LocalDate issueDate; //data de emissão
 
-  @Column(name = "total_cost", nullable = false)
+  @Column(name = "package_id", nullable = false)
+  private String packageId; //id do pacote
+
+  @Column(name = "package_value", nullable = false)
+  private BigDecimal packageValue; //valor que recebemos do pacote
+
+  @Column(name = "deal_value", nullable = false)
+  private Integer dealValue; //desconto que recebemos do pacote em porcentagem
+
+  @Column(name = "total_cost", nullable = true)
   private BigDecimal totalCost; //valor total da fatura
 
   @Column(name = "status", nullable = false)
