@@ -27,11 +27,10 @@ public class SendPackageRequest {
     packageValues.setPackageId(packageRequest.getPackageIds().get(0));
     packageValues.setPackageValue(response.getPackageValue());
     packageValues.setDealValue(response.getDealValue());
-
-    packageResponse.getPackages().add(packageValues);
+   
+    packageResponse.getListPackages().add(packageValues.toString());
     // arrumar isso
-    return packageResponse;
     }
-
+    return packageResponse;
   }
 }

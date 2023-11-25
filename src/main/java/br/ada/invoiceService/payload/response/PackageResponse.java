@@ -7,11 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 public class PackageResponse {
-  ArrayList<PackageResponse> listPackages;
+  ArrayList<String> listPackages;
 // recebe do pacote
 }
