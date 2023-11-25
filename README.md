@@ -1,79 +1,3 @@
-# Invoice-Service
-Microsserviço responsável pela emissão das faturas para os assinantes dos pacotes de canais.
-
-## Contratos
-### ASSINATURA-response-FATURA
-{
-    "userId":"string",
-    //LocalDate
-    "issueDate": 10/02/2023,
-    [
-        {
-            "packageId":"string",
-        },
-        {
-            "packageId":"string",
-        }
-    ],
-},
-{
-    "userId":"string",
-    //LocalDate
-    "issueDate": 10/02/2023,
-    [
-        {
-            "packageId":"string",
-        },
-        {
-            "packageId":"string",
-        }
-    ],
-}
-
-### FATURA-request-PACOTES:
-[
-    {
-        "packageId":"string",
-    },
-    {
-        "packageId":"string",
-    }
-]
-
-### PACOTES-response-FATURA:
-{
-    "packageId":"STRING",
-    //bigdecimal
-    "packageValue": 100,
-    //bigdecimal
-    "dealValue": 20,
-},
-{
-    "packageId":"STRING",
-    //bigdecimal
-    "packageValue": 300,
-    //bigdecimal
-    "dealValue": 50,
-}
-
-### FATURA-response-PAGAMENTOS:
-{
-    "invoiceId":"string",   
-    "userId":"string",
-    //LocalDate
-    "dueDate": 10/02/2023,
-    //bigdecimal
-    "totalCost": 200,
-},
-{
-    "invoiceId":"string",
-    "userId":"string",
-    //LocalDate
-    "dueDate": 05/04/2023,
-    //bigdecimal
-    "totalCost": 400,
-}
-
 # PAY-TV: Invoice Service 📺
 
 ## :paperclips: Sobre 
@@ -95,7 +19,6 @@ O objetivo deste repositório é implementar o Invoice Service - microsserviço 
 - **Linguagem de Programação:** Java
 - **Framework:** Spring Boot
 - **Banco de Dados:** PostgreSQL
-- **Arquitetura:** O projeto segue os princípios de SOLID e adota o padrão de arquitetura MVC (Model-View-Controller).
 - **Mensageria:** RabbitMQ
 - **Infraestrutura:** Docker
 - **Metodologia de Desenvolvimento:** Scrum
@@ -105,11 +28,12 @@ O objetivo deste repositório é implementar o Invoice Service - microsserviço 
   ```
   https://github.com/PAY-TV-Microservices/Invoice-Service
   ```
-2. Dentro do projeto, rode 
+2. Se necessário, instale as dependências
+3. Dentro do projeto, rode 
   ```
   docker-compose up
   ```
-3. Visualize a interface da API utilizando o Swagger UI ou outra plataforma de sua preferência <br>
+4. Visualize a interface da API utilizando o Swagger UI ou outra plataforma de sua preferência <br>
 > **Acesso ao Swagger UI** <br>
    Se preferir, você pode explorar e testar os endpoints da API acessando o Swagger UI. <br>
    Certifique-se de que o projeto esteja em execução e acesse a URL abaixo pelo seu navegador: <br>
@@ -117,12 +41,12 @@ O objetivo deste repositório é implementar o Invoice Service - microsserviço 
 
 ## 🤝 Contratos
 
-#### - ASSINATURA-response-FATURA
+#### - ASSINATURA-response-FATURA:
   ```
 {
     "userId":"string",
     //LocalDate
-    "issueDate": 10/02/2023,
+    "issueDate": LocalDate,
     [
         {
             "packageId":"string",
@@ -199,9 +123,4 @@ O objetivo deste repositório é implementar o Invoice Service - microsserviço 
 }
   ```
 
-## 📚 Documentação (endpoints)
-  ```
-  bla bla bla
-  ```
-
-> _O desenvolvimento dos Microsserviços de Fatura e Visita Técnica da PAY-TV foi realizado por [Dayane](https://github.com/acdayane), [Juliana](https://github.com/julianaando), [Karen](https://github.com/karenCLima), [Natalia](https://github.com/nataliagiacobo), [Raquel](https://github.com/raquelpcarvalho) e [Thaís](https://github.com/tdthais)._
+> _Os Microsserviços de Fatura e Visita Técnica da PAY-TV foram desenvolvidos por [Dayane](https://github.com/acdayane), [Juliana](https://github.com/julianaando), [Karen](https://github.com/karenCLima), [Natalia](https://github.com/nataliagiacobo), [Raquel](https://github.com/raquelpcarvalho) e [Thaís](https://github.com/tdthais)._
