@@ -15,7 +15,6 @@ public class InvoiceConvert {
     invoice.setUserId(invoiceRequest.getUserId());
     invoice.setIssueDate(invoiceRequest.getIssueDate());
 
-
     return invoice;
   }
 

@@ -25,7 +25,7 @@ public class Invoice {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private String id;
+  private Long id;
 
   @Column(name = "number", nullable = false)
   private String number; //número da fatura
