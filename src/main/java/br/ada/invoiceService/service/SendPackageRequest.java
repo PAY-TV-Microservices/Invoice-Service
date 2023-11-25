@@ -30,20 +30,20 @@ public class SendPackageRequest {
       .bodyToMono(PackageResponse.class)
       .block();
 
-    for (String packageId : packageRequest.getPackageIds()) {
-      Invoice response = invoiceRepository.findByPackageId(packageId);
-
-      BigDecimal packageIdResponse = packageValuesService.getPackagesValues();
-
-      Package packageValues = new Package();
-      packageValues.setPackageId(packageId);
-        if (response != null) {
-          packageValues.setPackageValue(packageIdResponse);
-          packageValues.setDealValue(response.getDealValue());
-        }
-
-      packageResponse.getListPackages().add(packageValues.toString());
-    }
+      // for (String packageId : packageRequest.getPackageIds()) {
+      //   Invoice response = invoiceRepository.findByPackageId(packageId);
+  
+      //   BigDecimal packageIdResponse = packageValuesService.getPackagesValues();
+  
+      //   Package packageValues = new Package();
+      //   packageValues.setPackageId(packageId);
+      //     if (response != null) {
+      //       packageValues.setPackageValue(packageIdResponse);
+      //       packageValues.setDealValue(response.getDealValue());
+      //     }
+  
+      //   packageResponse.getListPackages().add(packageValues);
+      // }
     return packageResponse;
   }
 }

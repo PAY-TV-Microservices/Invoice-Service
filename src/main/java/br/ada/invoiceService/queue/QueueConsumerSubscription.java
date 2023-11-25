@@ -20,13 +20,6 @@ public class QueueConsumerSubscription {
     private final ObjectMapper objectMapper;
     private final InvoiceService invoiceService;
 
-    // @RabbitListener(queues = {"subscription-package"})
-    // public void receive(String message) throws JsonProcessingException {
-    //     log.info("[QueueConsumerSubscription] Mensagem recebida {}", message);
-    //     InvoiceRequest invoiceRequest = objectMapper.readValue(message, InvoiceRequest.class);
-    //     invoiceService.saveInfoFromSubscription(invoiceRequest);
-    //     log.info("[QueueConsumerSubscription] Mensagem consumida {}", message);
-
     @RabbitListener(queues = {"${subscription.queue.receive-info.in}"})
     public void receive(Message message, Channel channel) throws IOException {
         log.info("[QueueConsumerSubscription] Mensagem recebida {}", message.getBody());

@@ -14,7 +14,7 @@ public class WebClientConfig {
   public WebClient webClient() {
     return WebClient
       .builder()
-        .baseUrl("http://localhost:8080/packages")
+        .baseUrl("https://3e41-187-55-99-75.ngrok.io/server/test")
         .build();
   }
 

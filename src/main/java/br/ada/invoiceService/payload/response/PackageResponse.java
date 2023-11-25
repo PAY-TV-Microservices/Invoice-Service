@@ -7,6 +7,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class PackageResponse {
-  ArrayList<String> listPackages;
+  ArrayList<Package> listPackages;
 // recebe do pacote
 }
